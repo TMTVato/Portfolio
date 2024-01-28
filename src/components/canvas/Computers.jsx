@@ -4,18 +4,17 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, initialRotation }) => {
   const computer = useGLTF("./smol_ame_in_an_upcycled_terrarium_hololiveen/scene.gltf");
 
   return (
-    <mesh>
+    <mesh rotation={initialRotation}>
       <hemisphereLight intensity={0.15} groundColor='black' />
-
       <pointLight intensity={10} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 1: 1.8}
-        position={isMobile ? [0, -3, -2.2] : [0, -3, -1.5]}
+        position={isMobile ? [0, -3, 0] : [0, -3, 0]}
       />
     </mesh>
   );
@@ -23,6 +22,7 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [initialRotation, setInitialRotation] = useState([0, Math.PI / 2.5, 0]); // Set initial rotation here
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -58,7 +58,7 @@ const ComputersCanvas = () => {
           onTouchMove={(event) => event.preventDefault()}
           onTouchEnd={(event) => event.preventDefault()}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile} initialRotation={initialRotation} />
       </Suspense>
 
       <Preload all />
