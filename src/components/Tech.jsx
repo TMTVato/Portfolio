@@ -12,7 +12,8 @@ const Tech = () => {
         <p className={`${styles.sectionSubText} `}>What I use</p>
         <h2 className={`${styles.sectionHeadText}`}>Technologies.</h2>
       </motion.div>
-    <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[30vh]`}>
+      
+    <div className={`${styles.padding} bg-black-100 rounded-2xl min-h-[30vh]`}>
     
       <div className="flex flex-row flex-wrap justify-center gap-10">
         {technologies.map((tech) => (
