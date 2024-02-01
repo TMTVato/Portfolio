@@ -110,124 +110,72 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      school_name: "Starbucks",
+      title: "Baccalauréat Géneral",
+      school_name: "Janson de Sailly",
       icon: starbucks,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "2019 - 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Obtention avec mention Bien",
+        "Spécialités : Mathématiques, NSI",
       ],
     },
     {
-      title: "React Native Developer",
-      school_name: "Tesla",
+      title: "BUT Informatique",
+      school_name: "IUT Rives de Seine",
       icon: tesla,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "Depuis 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Parcours : Réalisation d’applications",
       ],
     },
-    {
-      title: "Web Developer",
-      school_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      school_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
+   
   ];
   
  
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Gestion d'une formation",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "L’objectif de ce projet consistait à l’implémentation d’un besoin client. Ici, développer un interpréteur de commande permettant de gérer une formation universitaire. Tout en respectant des contraintes telles qu’un cahier des charges et des limites numériques.",
       tags: [
         {
-          name: "react",
+          name: "C",
           color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/TMTVato/SAE-Gestion-de-formation",
     },
     {
-      name: "Job IT",
+      name: "Jeu du quart du singe",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "L’objectif de ce projet consistait à développer un logiciel permettant à un ensemble de joueurs de disputer une partie de quart de singe. L’application doit veiller au respect des règles du jeu et gérer la totalité du déroulement de la partie jusqu'à l’annonce du perdant tout en respectant un cahier des charges.",
       tags: [
         {
-          name: "react",
+          name: "C++",
           color: "blue-text-gradient",
         },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
+    
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/TMTVato/SAE-Jeu-du-Quart-de-Singe",
     },
     {
-      name: "Trip Guide",
+      name: "Graphes: Manipulation degraphes et algorithme de Dijkstra",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Réalisation en Java d'une application permettant de manipuler des graphes. Une application qui permet de déterminer le plus court chemin d'un itinéraire.",
       tags: [
         {
-          name: "nextjs",
+          name: "Java",
           color: "blue-text-gradient",
         },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
+
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/TMTVato/SAE2.02-Graphes",
     },
   ];
   
