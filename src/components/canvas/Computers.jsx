@@ -5,30 +5,26 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ models, isMobile, initialRotation }) => {
-  if (!models || models.length === 0) return null;
+const Computers = ({ model, isMobile, initialRotation }) => {
+  if (!model || isMobile) return null;
 
   return (
-    <>
-      {models.map((model, index) => (
-        <mesh key={index} rotation={initialRotation}>
-          <hemisphereLight intensity={0.15} groundColor='black' />
-          <pointLight intensity={10} />
-          <primitive
-            object={model.scene}
-            scale={isMobile ? 1 : 1.5}
-            position={isMobile ? [0, -2.8, 0] : [0, -4, 0]}
-          />
-        </mesh>
-      ))}
-    </>
+    <mesh rotation={initialRotation}>
+      <hemisphereLight intensity={0.15} groundColor='black' />
+      <pointLight intensity={10} />
+      <primitive
+        object={model.scene}
+        scale={isMobile ? 1 : 1.5}
+        position={isMobile ? [0, -2.8, 0] : [0, -4, 0]}
+      />
+    </mesh>
   );
 };
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [initialRotation, setInitialRotation] = useState([0, Math.PI / 2.5, 0]); // Set initial rotation here
-  const [models, setModels] = useState([]);
+  const [model, setModel] = useState(null);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -47,28 +43,16 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const loader = new GLTFLoader();
-    const modelUrls = [
+    loader.load(
       "./smol_ame_in_an_upcycled_terrarium_hololiveen/scene.gltf",
-      // Add more model URLs as needed
-    ];
-
-    Promise.all(modelUrls.map(url => new Promise((resolve, reject) => {
-      loader.load(url,
-        (gltf) => {
-          resolve(gltf);
-        },
-        undefined,
-        (error) => {
-          reject(error);
-        }
-      );
-    })))
-    .then((models) => {
-      setModels(models);
-    })
-    .catch((error) => {
-      console.error("Error loading GLTF models", error);
-    });
+      (gltf) => {
+        setModel(gltf);
+      },
+      undefined,
+      (error) => {
+        console.error("Error loading GLTF model", error);
+      }
+    );
   }, []);
 
   return (
@@ -90,7 +74,7 @@ const ComputersCanvas = () => {
           onTouchMove={(event) => event.preventDefault()}
           onTouchEnd={(event) => event.preventDefault()}
         />
-        <Computers models={models} isMobile={isMobile} initialRotation={initialRotation} />
+        <Computers model={model} isMobile={isMobile} initialRotation={initialRotation} />
       </Suspense>
 
       <Preload all />
