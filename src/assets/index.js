@@ -19,14 +19,13 @@ import python from "./tech/python.png";
 import cplusplus from "./tech/cplusplus.png";
 import c from "./tech/c.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import janson from "./company/js-bleu.png";
+import uParis from "./company/uParis.jpg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import dijkstra from "./dijkstras-algorithm.jpg";
+import quartDeSinge from "./quart-de-singe.jpg";
+import formation from "./formation.png";
+import morlaixRefonte from "./morlaix.png";
 
 export {
   logo,
@@ -48,11 +47,10 @@ export {
   html,
   javascript,
   reactjs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  janson,
+  uParis,
+  dijkstra,
+  quartDeSinge,
+  formation,
+  morlaixRefonte,
 };

@@ -16,11 +16,12 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>John</span>
+            Salut, Je m'appelle <span className='text-[#915EFF]'>John 👋 </span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+          <p className={`${styles.heroSubText} mt-2 text-white-40`}>
+            Recherche Stage, Développement informatique: <b>À PARTIR DU 8 AVRIL 2024 POUR UNE DURÉE DE 8 à 12 SEMAINES. </b>
+            Je développe des applications logicielles et des sites web
+           
           </p>
         </div>
       </div>

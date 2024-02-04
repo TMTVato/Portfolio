@@ -1,3 +1,4 @@
+import { u } from "maath/dist/misc-19a3ec46.esm";
 import {
     mobile,
     backend,
@@ -14,23 +15,22 @@ import {
     reactjs,
     git,
     figma,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    quartDeSinge,
+    dijkstra,
+    formation,
+    morlaixRefonte,
+    janson,
+    uParis,
   } from "../assets";
   
   export const navLinks = [
     {
       id: "about",
-      title: "About",
+      title: "Profil",
     },
     {
       id: "works",
-      title: "Works",
+      title: "Projets",
     },
     {
       id: "contact",
@@ -40,19 +40,19 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Développeur Web",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Développeur React",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Développeur logiciel",
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Game designer",
       icon: creator,
     },
   ];
@@ -112,7 +112,7 @@ import {
     {
       title: "Baccalauréat Géneral",
       school_name: "Janson de Sailly",
-      icon: starbucks,
+      icon: janson,
       iconBg: "#383E56",
       date: "2019 - 2022",
       points: [
@@ -123,7 +123,7 @@ import {
     {
       title: "BUT Informatique",
       school_name: "IUT Rives de Seine",
-      icon: tesla,
+      icon: uParis,
       iconBg: "#E6DEDD",
       date: "Depuis 2022",
       points: [
@@ -146,7 +146,7 @@ import {
           color: "blue-text-gradient",
         },
       ],
-      image: carrent,
+      image: formation,
       source_code_link: "https://github.com/TMTVato/SAE-Gestion-de-formation",
     },
     {
@@ -156,26 +156,48 @@ import {
       tags: [
         {
           name: "C++",
-          color: "blue-text-gradient",
+          color: "pink-text-gradient",
         },
     
       ],
-      image: jobit,
+      image: quartDeSinge,
       source_code_link: "https://github.com/TMTVato/SAE-Jeu-du-Quart-de-Singe",
     },
     {
-      name: "Graphes: Manipulation degraphes et algorithme de Dijkstra",
+      name: "Graphes: algorithme de Dijkstra",
       description:
         "Réalisation en Java d'une application permettant de manipuler des graphes. Une application qui permet de déterminer le plus court chemin d'un itinéraire.",
       tags: [
         {
           name: "Java",
-          color: "blue-text-gradient",
+          color: "green-text-gradient",
         },
 
       ],
-      image: tripguide,
+      image: dijkstra,
       source_code_link: "https://github.com/TMTVato/SAE2.02-Graphes",
+    },
+    {
+      name: "Refonte site web: Morlaix communauté",
+      description:
+        "Réalisation en React d'un site web pour la communauté de Morlaix. Une MVP du site web qui a dû être refait entièrement pour être plus moderne et plus fonctionnel.",
+      tags: [
+        {
+          name: "React JS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Figma",
+          color: "green-text-gradient",
+        },
+        {
+          name: "HTML 5 / CSS",
+          color: "pink-text-gradient",
+        },
+
+      ],
+      image: morlaixRefonte,
+      source_code_link: "https://github.com/riadfrz/SAE_DEV_WEB",
     },
   ];
   
